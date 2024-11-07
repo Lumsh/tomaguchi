@@ -70,7 +70,16 @@ function playWithPet() {
   play = maxLevel;
   updateMouth();
   updateLevels();
-  saveLevels(); 
+  saveLevels();
+
+  pet.style.animation = 'none';
+  setTimeout(() => {
+    pet.style.animation = 'playMove 3s ease-in-out';
+
+    setTimeout(() => {
+      pet.style.animation = 'bounce 1s infinite alternate';
+    }, 3000);
+  }, 10);
 }
 
 function takePetForWalk() {

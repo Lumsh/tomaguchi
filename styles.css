@@ -36,6 +36,13 @@ body {
   100% { transform: translateY(-20px); }
 }
 
+@keyframes playMove {
+  0% { transform: translateX(0); }                       /* Start at center */
+  25% { transform: translateX(calc(-20vw + 20px)); }     /* Move left */
+  75% { transform: translateX(calc(20vw - 20px)); }      /* Move right */
+  100% { transform: translateX(0); }                     /* Return to center */
+}
+
 
 @keyframes walk {
   0% { transform: translateX(0); }
