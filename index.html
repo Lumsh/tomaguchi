@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tamaguchi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
+    
+
+    <div class="container">
+        <h1>Tamaguchi</h1>
+        <div id="pet" class="pet">
+            <svg id="happy" class="happy" width="50" height="25" viewBox="0 0 50 25" style="display: none;">
+                <path d="M5 20 Q 25 0, 45 20" stroke="black" stroke-width="3" fill="transparent" />
+            </svg>
+            <svg id="sad" class="sad" width="50" height="25" viewBox="0 0 50 25" style="display: none;">
+                <path d="M5 5 Q 25 25, 45 5" stroke="black" stroke-width="3" fill="transparent" />
+            </svg>
+        </div>
+        <div id="needsMessage" class="needs-message">The pet needs something!</div>
+
+        <!-- Level Indicators -->
+        <div class="level-container">
+            <div>Hunger Level</div>
+            <div class="level">
+                <div id="hungerFill" class="level-fill" style="width: 100%; background-color: orange;"></div>
+            </div>
+            <div>Play Level</div>
+            <div class="level">
+                <div id="playFill" class="level-fill" style="width: 100%; background-color: red;"></div>
+            </div>
+            <div>Walk Level</div>
+            <div class="level">
+                <div id="walkFill" class="level-fill" style="width: 100%; background-color: lightgreen;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Button section with grid positioning -->
+    <div class="btn">
+        <button onclick="feedPet()">Feed</button>
+        <button onclick="playWithPet()">Play</button>
+        <button onclick="takePetForWalk()">Walk</button>
+    </div>
+
+  
+
+    <script src="script/script.js" defer></script>
 </body>
 </html>

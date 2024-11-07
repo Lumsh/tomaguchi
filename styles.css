@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 300px);
+  background-color: purple;
+}
+
+.container {
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.pet {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1s infinite alternate;
+  transition: transform 1s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+/* Animation to move pet left and right */
+@keyframes walk {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(calc(100vw - 150px)); }
+  100% { transform: translateX(0); }
+}
+
+/* Eyes */
+.pet::before, .pet::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+}
+.pet::before { left: 25px; }  /* Left eye */
+.pet::after { right: 25px; }  /* Right eye */
+
+/* Happy and Sad Face Expressions */
+.happy, .sad {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  width: 50px;
+  height: 25px;
+}
+
+
+
+.needs-message {
+  margin: 15px;
+  padding: 10px;
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+/* Level indicators */
+.level-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.level {
+  margin: 5px;
+  width: 80%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.level-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  width: 20%;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: lightblue;
+  border: none;
+  border-radius: 25px;
+}
