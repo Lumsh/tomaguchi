@@ -36,14 +36,14 @@ body {
   100% { transform: translateY(-20px); }
 }
 
-/* Animation to move pet left and right */
+
 @keyframes walk {
   0% { transform: translateX(0); }
   50% { transform: translateX(calc(100vw - 150px)); }
   100% { transform: translateX(0); }
 }
 
-/* Eyes */
+
 .pet::before, .pet::after {
   content: '';
   width: 10px;
@@ -56,7 +56,7 @@ body {
 .pet::before { left: 25px; }  /* Left eye */
 .pet::after { right: 25px; }  /* Right eye */
 
-/* Happy and Sad Face Expressions */
+
 .happy, .sad {
   position: absolute;
   left: 50%;
@@ -76,7 +76,7 @@ body {
   display: none;
 }
 
-/* Level indicators */
+
 .level-container {
   margin-top: 20px;
   text-align: center;
